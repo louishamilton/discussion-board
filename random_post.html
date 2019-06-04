@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Random Post</title>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="random_post.js"></script>
+        <script>
+            $(function(){
+                var includes = $('[data-include]');
+                jQuery.each(includes, function(){
+                    var file = $(this).data('include') + '.html';
+                    $(this).load(file);
+                });
+            });
+        </script>
+
+        <style>html{visibility: hidden;opacity:0;}</style>
+
+    </head>
+    <body>
+        <div data-include="header"></div>
+        <h1 id="post_title">Loading post...</h1>
+        <p></p>
+    </body>
+    <script>
+        randomPost();
+    </script>
+</html>

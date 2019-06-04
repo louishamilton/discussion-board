@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Log In</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="logout.js"></script>
+        <script>
+            $(function(){
+                var includes = $('[data-include]');
+                jQuery.each(includes, function(){
+                    var file = $(this).data('include') + '.html';
+                    $(this).load(file);
+                });
+            });
+        </script>
+        <style>html{visibility: hidden;opacity:0;}</style>
+    </head>
+    <body>
+        <div data-include="header"></div>
+        <h1>Thanks for stopping by the forums!</h1>
+
+        <p id = "message">
+            <button onclick="loadContent()">Log Out</button>
+        </p>
+
+
+
+    </body>
+</html>

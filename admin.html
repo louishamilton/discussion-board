@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Profile Information</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="admin.js"></script>
+        <script>
+            //HTML import function from https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file, also found in other html files.
+            $(function(){
+                var includes = $('[data-include]');
+                jQuery.each(includes, function(){
+                    var file = $(this).data('include') + '.html';
+                    $(this).load(file);
+                });
+            });
+        </script>
+        <script>checkPrivilege()</script>
+        <style>html{visibility: hidden;opacity:0;}</style>
+    </head>
+
+    <body>
+        <div data-include="header"></div>
+        <div id = "access"><h1>Checking privileges...</h1></div>
+    </body>
+</html>

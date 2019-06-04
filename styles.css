@@ -1,0 +1,51 @@
+/* Navigation bar menu inspired by https://www.w3schools.com/css/css_navbar.asp */
+
+ul {
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #444;
+  position: sticky;
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #222;
+}
+
+.home {
+  background-color: #009933;
+}
+
+a.home:hover {
+    background-color: #006000;
+}
+
+body {
+  padding: 16px;
+  margin-top: 30px;
+}
+
+html {
+    visibility: visible;
+    opacity: 1;
+}

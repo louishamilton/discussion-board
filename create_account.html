@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Create an Account</title>
+        <style>
+            .error {
+              color: #FF0000;
+            }
+        </style>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="create_account.js"></script>
+        <script>
+            $(function(){
+                var includes = $('[data-include]');
+                jQuery.each(includes, function(){
+                    var file = $(this).data('include') + '.html';
+                    $(this).load(file);
+                });
+            });
+        </script>
+        <style>html{visibility: hidden;opacity:0;}</style>
+
+    </head>
+    <body>
+        <div data-include="header"></div>
+        <h1>Welcome to the forums!</h1>
+        <h2>Create an Account:</h2>
+
+        <label for="firstname">First Name: </label>
+        <input type = "text" id = "firstname">
+        <span class="error" id="fnameErr"></span><br><br>
+        <label for="lastname">Last Name: </label>
+        <input type = "text" id = "lastname">
+        <span class="error" id="lnameErr"></span><br><br>
+        <label for="email">Email: </label>
+        <input type = "text" id = "email">
+        <span class="error" id="emailErr"></span><br><br>
+        <label for="username">Username: </label>
+        <input type = "text" id = "username">
+        <span class="error" id="userErr"></span><br><br>
+        <label for="password">Password: </label>
+        <input type = "password" id = "password">
+        <span class="error" id="passErr"></span><br><br>
+        <button onclick="onButton()">Submit</button>
+
+        <p id = "message"></p>
+
+        <br><br>
+
+        <div id="output"></div>
+    </body>
+</html>
